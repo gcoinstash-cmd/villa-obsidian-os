@@ -75,7 +75,7 @@ export default function App() {
   // 1. Unified State Sync Engine (Firebase Live + Local Fallback)
   useEffect(() => {
     // Check if visiting /admin route
-    if (window.location.pathname === '/admin' || window.location.hash === '#admin') {
+    if ((window.location.pathname.includes('admin') || window.location.hash.includes('admin')) || window.location.hash === '#admin') {
       setIsAdminOpen(true);
     }
     // Check if properties exist in LocalStorage initially, if not popualte the sample properties
